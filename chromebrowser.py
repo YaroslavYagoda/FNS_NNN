@@ -33,15 +33,6 @@ class ChromeBrowser:
         """
         self.driver.quit()
 
-    def send_keys_by_id(self, valueID: str, data: str):
-        """
-        Ввод текстовой информации "data" в элемент на странице по его "valueID"
-        :param valueID: ID элемента на странице
-        :param data: вводимая текстовая информация
-        """
-        field = self.driver.find_element(By.ID, valueID)
-        field.send_keys(data)
-
     def send_keys_by_xpath(self, xpath: str, data: str):
         """
         Ввод текстовой информации "data" в элемент на странице по его "xpath"
